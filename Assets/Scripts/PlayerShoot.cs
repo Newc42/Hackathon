@@ -7,21 +7,22 @@ public class PlayerShoot : MonoBehaviour
 
     public GameObject bullet;
     public GameObject player;
-
+    public AudioClip shootSFX;
+    public AudioSource audioSource;
 
     void Update()
     {
-
 
         if(Input.GetKey(KeyCode.Space)){
             Shoot();
         }
     }
 
-
     void Shoot(){
-    if (Input.GetKey(KeyCode.Space))
+    if (Input.GetKeyDown(KeyCode.Space))
         {
+            audioSource.PlayOneShot(shootSFX);
+
             GameObject shotInstance =  Instantiate(bullet, player.transform.position, player.transform.rotation);
             shotInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 15f);
 
@@ -30,4 +31,5 @@ public class PlayerShoot : MonoBehaviour
         }
         
     }
+
 }
