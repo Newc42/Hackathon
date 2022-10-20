@@ -9,6 +9,7 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
+        /*
         if(Input.GetKey(KeyCode.Space)){
 
             Rigidbody clone;
@@ -17,5 +18,6 @@ public class PlayerShoot : MonoBehaviour
            
             clone.velocity = transform.TransformDirection(Vector3.forward * 10);
         }
+        */
     }
 }
