@@ -214,8 +214,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.00029993057, y: 0.032900006}
-  m_SizeDelta: {x: -0.1225, y: -0.1821}
+  m_AnchoredPosition: {x: 0.0018999577, y: 0.028}
+  m_SizeDelta: {x: -0.1182, y: -0.1821}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126763584
 MonoBehaviour:
@@ -791,7 +791,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &991308679
 RectTransform:
@@ -1296,7 +1296,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848002388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.31}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children:
   - {fileID: 126763583}
@@ -1305,7 +1305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -251.63, y: -492.573}
   m_SizeDelta: {x: 1.5, y: 0.3125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848002390
@@ -1398,7 +1398,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3452912944203954355, guid: b1c6aa73bb6cbf2488c9a1509d240337, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
