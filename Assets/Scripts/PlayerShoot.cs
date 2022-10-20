@@ -11,8 +11,13 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
+ main
+        /*
+        if(Input.GetKey(KeyCode.Space)){
+
         Shoot();
     }
+ main
 
     void Shoot(){
     if (Input.GetKey(KeyCode.Space))
@@ -23,5 +28,6 @@ public class PlayerShoot : MonoBehaviour
             GameObject.Destroy(shotInstance, 5f);
             
         }
+        */
     }
 }
