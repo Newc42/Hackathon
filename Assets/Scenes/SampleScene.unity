@@ -991,7 +991,7 @@ GameObject:
   - component: {fileID: 1477193794}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1267,9 +1267,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1356974a8fb1c9943a080be3b42588ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHp: 0
-  heartPickup: {fileID: 0}
-  audioSource: {fileID: 0}
+  playerHp: 10
+  heartPickup: {fileID: 8300000, guid: 43b34b0b825b81b48963ab96b7eae8cd, type: 3}
+  audioSource: {fileID: 1477193794}
+  hurt: {fileID: 8300000, guid: 62ecb2f905cf4734daf1be62f396c22c, type: 3}
 --- !u!1 &1848002388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,6 +1604,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2088649155353968415, guid: 84bcf7cf9dfbaf44da748627f1e680ba, type: 3}
+      propertyPath: enemyHealth
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84bcf7cf9dfbaf44da748627f1e680ba, type: 3}
 --- !u!1001 &2088649156323589760
@@ -1659,6 +1664,14 @@ PrefabInstance:
     - target: {fileID: 2088649155353968413, guid: 84bcf7cf9dfbaf44da748627f1e680ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923265775781267848, guid: 84bcf7cf9dfbaf44da748627f1e680ba, type: 3}
+      propertyPath: maxSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923265775781267848, guid: 84bcf7cf9dfbaf44da748627f1e680ba, type: 3}
+      propertyPath: accelerationTime
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84bcf7cf9dfbaf44da748627f1e680ba, type: 3}

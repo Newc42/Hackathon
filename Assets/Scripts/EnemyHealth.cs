@@ -16,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Bullet")){
             enemyHealth--;
+            
             if(enemyHealth < 0 && !isDead){
                 enemyDie();
             }
@@ -39,5 +40,7 @@ public class EnemyHealth : MonoBehaviour
         GameObject heartInstance =  Instantiate(heart, transform.position, transform.rotation);
         heartInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -0.05f);
     }
+
+   
 
 }
