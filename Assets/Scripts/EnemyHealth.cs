@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class EnemyHealth : MonoBehaviour
     public AudioClip explodeSFX;
     public AudioSource audioSource;
     public GameObject heart;
+
+    public Slider HPSlider;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Bullet")){
