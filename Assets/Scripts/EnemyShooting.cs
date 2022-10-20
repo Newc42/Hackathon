@@ -15,7 +15,7 @@ public class EnemyShooting : MonoBehaviour
     public void shooting()
     {
         GameObject shotInstance =  Instantiate(bullet, transform.position, transform.rotation);
-        shotInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -3f);
+        shotInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -10f);
 
         GameObject.Destroy(shotInstance, 5f);
     }

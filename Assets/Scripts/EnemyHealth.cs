@@ -14,7 +14,7 @@ public class EnemyHealth : MonoBehaviour
     public AudioSource audioSource;
     public GameObject heart;
 
-    public Slider HPSlider;
+    
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Bullet")){
@@ -25,6 +25,8 @@ public class EnemyHealth : MonoBehaviour
             }
         }
     }
+
+    
 
     void enemyDie(){
         int spawnCoin = Random.Range(0, 10);
