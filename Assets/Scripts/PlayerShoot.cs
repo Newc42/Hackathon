@@ -23,4 +23,8 @@ public class PlayerShoot : MonoBehaviour
             GameObject.Destroy(shotInstance, 5f);
         }
     }
+    private IEnumerator WaitForShoot()
+    {
+         yield return new WaitForSeconds(1f);
+    }
 }
