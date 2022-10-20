@@ -6,16 +6,21 @@ public class PlayerShoot : MonoBehaviour
 {
 
     public GameObject bullet;
+    public GameObject player;
+
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space)){
+        Shoot();
+    }
 
-            Rigidbody clone;
-            clone = Instantiate(bullet, transform.position, transform.rotation);
+    void Shoot(){
+    if (Input.GetKey(KeyCode.Space))
+        {
+            GameObject shotInstance =  Instantiate(bullet, player.transform.position, player.transform.rotation);
+            shotInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 15f);
 
-           
-            clone.velocity = transform.TransformDirection(Vector3.forward * 10);
+            GameObject.Destroy(shotInstance, 5f);
         }
     }
 }
