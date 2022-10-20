@@ -23,6 +23,9 @@ TextureImporter:
   - first:
       213: 5415952833359421861
     second: SpaceShooterAssetPack_Miscellaneous 1_6
+  - first:
+      213: 4468379849544261938
+    second: SpaceShooterAssetPack_Miscellaneous 1_7
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -205,7 +208,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -226,7 +229,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -247,7 +250,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,6 +258,27 @@ TextureImporter:
       bones: []
       spriteID: 5a1a8a03864592b40800000000000000
       internalID: 5415952833359421861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterAssetPack_Miscellaneous 1_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23169957ccfd20e30800000000000000
+      internalID: 4468379849544261938
       vertices: []
       indices: 
       edges: []
