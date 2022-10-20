@@ -14,6 +14,15 @@ TextureImporter:
   - first:
       213: 810865556278172725
     second: SpaceShooterAssetPack_Miscellaneous_3
+  - first:
+      213: -3173528827444466201
+    second: SpaceShooterAssetPack_Miscellaneous_4
+  - first:
+      213: 6933587369445508384
+    second: SpaceShooterAssetPack_Miscellaneous_5
+  - first:
+      213: -79717898379710900
+    second: SpaceShooterAssetPack_Miscellaneous_6
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -183,6 +192,69 @@ TextureImporter:
       bones: []
       spriteID: 53c5f826de5c04b00800000000000000
       internalID: 810865556278172725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterAssetPack_Miscellaneous_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ede5b3785c55f3d0800000000000000
+      internalID: -3173528827444466201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterAssetPack_Miscellaneous_5
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0254fee0afc093060800000000000000
+      internalID: 6933587369445508384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterAssetPack_Miscellaneous_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e26d86ef8c4eef0800000000000000
+      internalID: -79717898379710900
       vertices: []
       indices: 
       edges: []

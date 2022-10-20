@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             player.GetComponent<SpriteRenderer>().sprite = spriteLeft;
         }else if(horizontal < 0 && horizontal > -0.5f)
         {
-            player.GetComponent<SpriteRenderer>().sprite = spriteLeft;
+            player.GetComponent<SpriteRenderer>().sprite = spriteDef;
         }
     }
 }
