@@ -34,7 +34,7 @@ public class playerHealth : MonoBehaviour
         Debug.Log(playerHp);
         audioSource.PlayOneShot(hurt);
         HPSlider.value = playerHp;
-        if(playerHp<0){
+        if(playerHp<=0){
             playerDie();
         }
     }

@@ -43,7 +43,6 @@ public class EnemyHealth : MonoBehaviour
 
     public void spawn(){
         GameObject heartInstance =  Instantiate(heart, transform.position, transform.rotation);
-        heartInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -0.05f);
     }
 
    
