@@ -11,6 +11,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject enemy;
     public AudioClip explodeSFX;
     public AudioSource audioSource;
+    public GameObject heart;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Bullet")){
@@ -22,10 +23,21 @@ public class EnemyHealth : MonoBehaviour
     }
 
     void enemyDie(){
+        int spawnCoin = Random.Range(0, 10);
+
+        if(spawnCoin <= 1){
+            spawn();
+        }
+
         isDead = true;
         enemy.GetComponent<SpriteRenderer>().sprite = enemyExplode;
         audioSource.PlayOneShot(explodeSFX);
         GameObject.Destroy(this.gameObject, 0.3f);
+    }
+
+    public void spawn(){
+        GameObject heartInstance =  Instantiate(heart, transform.position, transform.rotation);
+        heartInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -0.05f);
     }
 
 }

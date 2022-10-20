@@ -124,10 +124,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 0
+  isDead: 0
   enemyExplode: {fileID: 7275858402650460646, guid: 5e08ae4de1a00694ab07944007631a1a, type: 3}
   enemy: {fileID: 2088649155353968411}
   explodeSFX: {fileID: 8300000, guid: 883c1b767977175478cfe1fdc09d3535, type: 3}
   audioSource: {fileID: 2088649155353968416}
+  heart: {fileID: 8651946994020910260, guid: 44a191bc3e7965546808a0382cbe1e8e, type: 3}
 --- !u!82 &2088649155353968416
 AudioSource:
   m_ObjectHideFlags: 0
