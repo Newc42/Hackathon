@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: -3452912944203954355
     second: SpaceShooterAssetPack_IU_0
+  - first:
+      213: -7258982193374419196
+    second: SpaceShooterAssetPack_IU_1
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -103,7 +106,7 @@ TextureImporter:
         width: 24
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -111,6 +114,27 @@ TextureImporter:
       bones: []
       spriteID: d470068b8f9c410d0800000000000000
       internalID: -3452912944203954355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterAssetPack_IU_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 99
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4072805a72ae24b90800000000000000
+      internalID: -7258982193374419196
       vertices: []
       indices: 
       edges: []
