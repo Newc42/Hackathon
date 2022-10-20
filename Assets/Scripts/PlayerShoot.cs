@@ -21,10 +21,7 @@ public class PlayerShoot : MonoBehaviour
             shotInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 15f);
 
             GameObject.Destroy(shotInstance, 5f);
+            
         }
-    }
-    private IEnumerator WaitForShoot()
-    {
-         yield return new WaitForSeconds(1f);
     }
 }
