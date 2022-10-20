@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    public GameObject bullet;
+
     void Update()
     {
-        
+        if(Input.GetKey(KeyCode.Space)){
+
+            Rigidbody clone;
+            clone = Instantiate(bullet, transform.position, transform.rotation);
+
+           
+            clone.velocity = transform.TransformDirection(Vector3.forward * 10);
+        }
     }
 }
