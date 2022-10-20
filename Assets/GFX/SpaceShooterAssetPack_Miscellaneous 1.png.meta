@@ -32,6 +32,9 @@ TextureImporter:
   - first:
       213: -6079765127370652908
     second: SpaceShooterAssetPack_Miscellaneous 1_9
+  - first:
+      213: 4717558214569402924
+    second: SpaceShooterAssetPack_Miscellaneous 1_10
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -319,7 +322,7 @@ TextureImporter:
         width: 5
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -327,6 +330,27 @@ TextureImporter:
       bones: []
       spriteID: 413c34124d550aba0800000000000000
       internalID: -6079765127370652908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterAssetPack_Miscellaneous 1_10
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22a2a29332287140800000000000000
+      internalID: 4717558214569402924
       vertices: []
       indices: 
       edges: []
