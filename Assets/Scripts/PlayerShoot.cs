@@ -26,7 +26,7 @@ public class PlayerShoot : MonoBehaviour
             GameObject shotInstance =  Instantiate(bullet, player.transform.position, player.transform.rotation);
             shotInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 15f);
 
-            GameObject.Destroy(shotInstance, 5f);
+            GameObject.Destroy(shotInstance, 1f);
             
         }
         

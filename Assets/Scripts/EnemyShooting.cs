@@ -17,6 +17,6 @@ public class EnemyShooting : MonoBehaviour
         GameObject shotInstance =  Instantiate(bullet, transform.position, transform.rotation);
         shotInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -10f);
 
-        GameObject.Destroy(shotInstance, 5f);
+        GameObject.Destroy(shotInstance, 1.5f);
     }
 }

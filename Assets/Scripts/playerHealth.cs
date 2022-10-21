@@ -20,6 +20,7 @@ public class playerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Heart")){
+            
             playerHp += 1;
             GameObject.Destroy(other.gameObject);
             audioSource.PlayOneShot(heartPickup);
