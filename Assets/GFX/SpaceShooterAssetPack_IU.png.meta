@@ -11,6 +11,15 @@ TextureImporter:
   - first:
       213: 4888668457609010390
     second: SpaceShooterAssetPack_IU_2
+  - first:
+      213: 8965784993433089314
+    second: SpaceShooterAssetPack_IU_3
+  - first:
+      213: 4642847126731458489
+    second: SpaceShooterAssetPack_IU_4
+  - first:
+      213: -223824773378648341
+    second: SpaceShooterAssetPack_IU_5
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -151,7 +160,7 @@ TextureImporter:
         width: 24
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,6 +168,69 @@ TextureImporter:
       bones: []
       spriteID: 6dc11789f0a08d340800000000000000
       internalID: 4888668457609010390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterAssetPack_IU_3
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 99
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2257b12e2fddc6c70800000000000000
+      internalID: 8965784993433089314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterAssetPack_IU_4
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 85
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b78547ecd4be6040800000000000000
+      internalID: 4642847126731458489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpaceShooterAssetPack_IU_5
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 71
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be655d2fd80d4ecf0800000000000000
+      internalID: -223824773378648341
       vertices: []
       indices: 
       edges: []
