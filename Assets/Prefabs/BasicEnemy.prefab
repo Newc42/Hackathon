@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 3923265775781267848}
   - component: {fileID: 2088649155353968416}
   - component: {fileID: 7365354279217864425}
-  - component: {fileID: 5464359679224599092}
   - component: {fileID: 794464516009452145}
-  m_Layer: 0
+  - component: {fileID: 1460199482676028316}
+  m_Layer: 7
   m_Name: BasicEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -149,6 +149,7 @@ MonoBehaviour:
   audioSource: {fileID: 2088649155353968416}
   heart: {fileID: 8651946994020910260, guid: 44a191bc3e7965546808a0382cbe1e8e, type: 3}
   hurtSFX: {fileID: 8300000, guid: 2cebc1766082a48438eb1bd5957205cf, type: 3}
+  enemyManager: {fileID: 0}
 --- !u!114 &3923265775781267848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   accelerationTime: 0.01
   rb: {fileID: 7365354279217864425}
-  maxSpeed: 1.3
+  maxSpeed: 1
 --- !u!82 &2088649155353968416
 AudioSource:
   m_ObjectHideFlags: 0
@@ -281,32 +282,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &5464359679224599092
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088649155353968411}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
-  m_EdgeRadius: 0
 --- !u!114 &794464516009452145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,3 +295,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: f887816527da44b46bdd53d53b8781f5, type: 2}
+--- !u!58 &1460199482676028316
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088649155353968411}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25

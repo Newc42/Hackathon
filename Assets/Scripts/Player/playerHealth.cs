@@ -10,6 +10,7 @@ public class playerHealth : MonoBehaviour
     public AudioClip heartPickup;
     public AudioSource audioSource;
     public AudioClip hurt;
+    [SerializeField] GameObject myCamera;
 
     public Slider HPSlider;
 
@@ -35,6 +36,7 @@ public class playerHealth : MonoBehaviour
         audioSource.PlayOneShot(hurt);
         HPSlider.value = playerHp;
         GetComponent<PlayerChangeColor>().ChangeColor();
+        myCamera.GetComponent<CameraShake>().Play();
         if(playerHp<=0){
             PlayerDie();
         }

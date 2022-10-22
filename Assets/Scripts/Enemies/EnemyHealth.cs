@@ -14,7 +14,12 @@ public class EnemyHealth : MonoBehaviour
     public AudioSource audioSource;
     public GameObject heart;
     public AudioClip hurtSFX;
+    public GameObject enemyManager;
     
+
+    void Start() {
+        enemyManager = GameObject.FindGameObjectWithTag("EnemiesManager");
+    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Bullet")){
@@ -31,6 +36,7 @@ public class EnemyHealth : MonoBehaviour
 
         if(enemyHealth < 0 && !isDead){
             EnemyDie();
+            enemyManager.GetComponent<MenuLoader>().ChangeScene();
         }
     }
 
@@ -45,6 +51,8 @@ public class EnemyHealth : MonoBehaviour
         enemy.GetComponent<SpriteRenderer>().sprite = enemyExplode;
         audioSource.PlayOneShot(explodeSFX);
         GameObject.Destroy(this.gameObject, 0.3f);
+
+    
     }
 
     public void SpawnHeart(){
