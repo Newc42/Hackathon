@@ -9,7 +9,7 @@ public class EnemyShooting : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("shooting", 1.0f, Random.Range(2f, 5f));
+        InvokeRepeating("shooting", Random.Range(2f, 5f), Random.Range(2f, 5f));
     }
 
     public void shooting()

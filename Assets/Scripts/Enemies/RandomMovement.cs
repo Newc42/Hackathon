@@ -15,7 +15,7 @@ public class RandomMovement : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if(timeLeft <= 0)
     {
-        movement = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        movement = new Vector2(Random.Range(-1f, 1f), Random.Range(-1.7f, 1f));
         timeLeft += accelerationTime;
     }
     }

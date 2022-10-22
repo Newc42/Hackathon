@@ -48,4 +48,5 @@ public class PlayerMovement : MonoBehaviour
             player.GetComponent<SpriteRenderer>().sprite = spriteDef;
         }
     }
+
 }

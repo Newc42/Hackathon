@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Heart
   - Music
+  - EnemiesManager
+  - WaveManager
+  - Score
   layers:
   - Default
   - TransparentFX
@@ -16,8 +19,8 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
+  - Enemy
+  - Player
   - 
   - 
   - 

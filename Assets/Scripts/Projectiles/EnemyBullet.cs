@@ -8,7 +8,6 @@ public class EnemyBullet : MonoBehaviour
     public Sprite bulletExplode;
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player")){
-            Debug.Log("awdawdaw");
             other.GetComponent<playerHealth>().LoseHp();
 
             this.GetComponent<SpriteRenderer>().sprite = bulletExplode;

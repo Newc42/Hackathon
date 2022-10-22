@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-
     public float enemyHealth = 2f;
     public bool isDead = false;
     public Sprite enemyExplode;
@@ -14,7 +13,13 @@ public class EnemyHealth : MonoBehaviour
     public AudioSource audioSource;
     public GameObject heart;
     public AudioClip hurtSFX;
+    public GameObject enemyManager;
+    public GameObject scoreText;
     
+
+    void Start() {
+        enemyManager = GameObject.FindGameObjectWithTag("EnemiesManager");
+    }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Bullet")){
@@ -29,15 +34,17 @@ public class EnemyHealth : MonoBehaviour
 
         audioSource.PlayOneShot(hurtSFX);
 
-        if(enemyHealth < 0 && !isDead){
+        if(enemyHealth <= 0 && !isDead){
             EnemyDie();
+            enemyManager.GetComponent<MenuLoader>().ChangeScene();
         }
     }
 
     void EnemyDie(){
         int spawnCoin = Random.Range(0, 10);
-
-        if(spawnCoin <= 1){
+        //NewScore();
+        
+        if (spawnCoin <= 1){
             SpawnHeart();
         }
 
@@ -45,11 +52,15 @@ public class EnemyHealth : MonoBehaviour
         enemy.GetComponent<SpriteRenderer>().sprite = enemyExplode;
         audioSource.PlayOneShot(explodeSFX);
         GameObject.Destroy(this.gameObject, 0.3f);
+
+    
     }
 
     public void SpawnHeart(){
         GameObject heartInstance =  Instantiate(heart, transform.position, transform.rotation);
     }
 
-   
+    public void NewScore() {
+        scoreText.GetComponent<Score>().ChangeScore();
+    }
 }
