@@ -32,15 +32,15 @@ public class playerHealth : MonoBehaviour
 
     public void LoseHp(){
         playerHp -= 1;
-        Debug.Log(playerHp);
         audioSource.PlayOneShot(hurt);
         HPSlider.value = playerHp;
+        GetComponent<PlayerChangeColor>().ChangeColor();
         if(playerHp<=0){
-            playerDie();
+            PlayerDie();
         }
     }
 
-    public void playerDie(){
+    public void PlayerDie(){
         SceneManager.LoadScene("Menu");  
         GameObject.Destroy(this.gameObject);
     }

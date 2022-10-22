@@ -13,26 +13,32 @@ public class EnemyHealth : MonoBehaviour
     public AudioClip explodeSFX;
     public AudioSource audioSource;
     public GameObject heart;
-
+    public AudioClip hurtSFX;
     
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Bullet")){
-            enemyHealth--;
-            
-            if(enemyHealth < 0 && !isDead){
-                enemyDie();
-            }
+            Destroy(other.gameObject);
+            EnemyLoseHp();
         }
     }
 
-    
+    void EnemyLoseHp(){
+        enemyHealth--;
+        GetComponent<EnemyChangeColor>().ChangeColor();
 
-    void enemyDie(){
+        audioSource.PlayOneShot(hurtSFX);
+
+        if(enemyHealth < 0 && !isDead){
+            EnemyDie();
+        }
+    }
+
+    void EnemyDie(){
         int spawnCoin = Random.Range(0, 10);
 
         if(spawnCoin <= 1){
-            spawn();
+            SpawnHeart();
         }
 
         isDead = true;
@@ -41,10 +47,9 @@ public class EnemyHealth : MonoBehaviour
         GameObject.Destroy(this.gameObject, 0.3f);
     }
 
-    public void spawn(){
+    public void SpawnHeart(){
         GameObject heartInstance =  Instantiate(heart, transform.position, transform.rotation);
     }
 
    
-
 }
