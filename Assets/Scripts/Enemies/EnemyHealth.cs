@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-
     public float enemyHealth = 2f;
     public bool isDead = false;
     public Sprite enemyExplode;
@@ -15,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject heart;
     public AudioClip hurtSFX;
     public GameObject enemyManager;
+    public GameObject scoreText;
     
 
     void Start() {
@@ -34,7 +34,7 @@ public class EnemyHealth : MonoBehaviour
 
         audioSource.PlayOneShot(hurtSFX);
 
-        if(enemyHealth < 0 && !isDead){
+        if(enemyHealth <= 0 && !isDead){
             EnemyDie();
             enemyManager.GetComponent<MenuLoader>().ChangeScene();
         }
@@ -42,8 +42,9 @@ public class EnemyHealth : MonoBehaviour
 
     void EnemyDie(){
         int spawnCoin = Random.Range(0, 10);
-
-        if(spawnCoin <= 1){
+        //NewScore();
+        
+        if (spawnCoin <= 1){
             SpawnHeart();
         }
 
@@ -59,5 +60,7 @@ public class EnemyHealth : MonoBehaviour
         GameObject heartInstance =  Instantiate(heart, transform.position, transform.rotation);
     }
 
-   
+    public void NewScore() {
+        scoreText.GetComponent<Score>().ChangeScore();
+    }
 }

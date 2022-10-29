@@ -10,6 +10,7 @@ TagManager:
   - Music
   - EnemiesManager
   - WaveManager
+  - Score
   layers:
   - Default
   - TransparentFX
