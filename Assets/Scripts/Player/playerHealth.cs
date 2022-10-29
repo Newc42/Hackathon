@@ -12,11 +12,11 @@ public class playerHealth : MonoBehaviour
     public AudioClip hurt;
     [SerializeField] GameObject myCamera;
 
-    //public Slider HPSlider;
+    public Slider HPSlider;
 
     private void Start() {
-        //HPSlider.maxValue = playerHp;
-        //HPSlider.value = playerHp;
+        HPSlider.maxValue = playerHp;
+        HPSlider.value = HPSlider.maxValue - playerHp;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -26,7 +26,7 @@ public class playerHealth : MonoBehaviour
             GameObject.Destroy(other.gameObject);
             audioSource.PlayOneShot(heartPickup);
             
-            //HPSlider.value = playerHp;
+            HPSlider.value = HPSlider.maxValue - playerHp;
             
         }
 
@@ -36,7 +36,7 @@ public class playerHealth : MonoBehaviour
     public void LoseHp(){
         playerHp -= 1;
         audioSource.PlayOneShot(hurt);
-        //HPSlider.value = playerHp;
+        HPSlider.value = HPSlider.maxValue - playerHp;
         Debug.Log("lololo");
         GetComponent<PlayerChangeColor>().ChangeColor();
         myCamera.GetComponent<CameraShake>().Play();
