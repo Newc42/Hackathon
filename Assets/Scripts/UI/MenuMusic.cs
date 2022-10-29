@@ -14,6 +14,7 @@ public class MenuMusic : MonoBehaviour
         GameObject[] musicObj = GameObject.FindGameObjectsWithTag("Music");
         if (musicObj.Length > 1)
         {
+            Debug.Log("zniszczono: " + this.gameObject);
             Destroy(this.gameObject);
         }
         DontDestroyOnLoad(this.gameObject);

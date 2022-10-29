@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShooting : MonoBehaviour
+public class BossShooting : MonoBehaviour
 {
 
     public GameObject bullet;
+
+
 
 
     void Start()
