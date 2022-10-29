@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 794464516009452145}
   - component: {fileID: 1460199482676028316}
   m_Layer: 7
-  m_Name: BasicEnemy
+  m_Name: BasicEnemy (5)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 7
-  m_Sprite: {fileID: -6811324833031856470, guid: 05d74b7ab5a255f4499aa415ea92f857, type: 3}
+  m_Sprite: {fileID: -5746810173728730559, guid: 05d74b7ab5a255f4499aa415ea92f857, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -143,8 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 5
   isDead: 0
-  enemyExplode: {fileID: 7275858402650460646, guid: 5e08ae4de1a00694ab07944007631a1a, type: 3}
-  enemy: {fileID: 2088649155353968411}
+  enemyExplode: {fileID: 202343877879671910, guid: eb4497217e7fcf249b47476930e9a25a, type: 3}
   explodeSFX: {fileID: 8300000, guid: 883c1b767977175478cfe1fdc09d3535, type: 3}
   audioSource: {fileID: 2088649155353968416}
   heart: {fileID: 8651946994020910260, guid: 44a191bc3e7965546808a0382cbe1e8e, type: 3}
@@ -165,7 +164,7 @@ MonoBehaviour:
   accelerationTime: 0.01
   rb: {fileID: 7365354279217864425}
   maxSpeed: 1
-  forwardMovement: 1.4
+  forwardMovement: 1.6
 --- !u!82 &2088649155353968416
 AudioSource:
   m_ObjectHideFlags: 0

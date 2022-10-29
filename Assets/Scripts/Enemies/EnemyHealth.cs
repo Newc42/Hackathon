@@ -8,17 +8,15 @@ public class EnemyHealth : MonoBehaviour
     public float enemyHealth = 2f;
     public bool isDead = false;
     public Sprite enemyExplode;
-    public GameObject enemy;
     public AudioClip explodeSFX;
     public AudioSource audioSource;
     public GameObject heart;
     public AudioClip hurtSFX;
     public GameObject enemyManager;
-    public GameObject scoreText;
     
 
     void Start() {
-        enemyManager = GameObject.FindGameObjectWithTag("EnemiesManager");
+        enemyManager = GameObject.FindGameObjectWithTag("MenuLoader");
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -36,31 +34,27 @@ public class EnemyHealth : MonoBehaviour
 
         if(enemyHealth <= 0 && !isDead){
             EnemyDie();
-            enemyManager.GetComponent<MenuLoader>().ChangeScene();
         }
     }
 
     void EnemyDie(){
+        enemyManager.GetComponent<MenuLoader>().EnemyDestroyed();
+
         int spawnCoin = Random.Range(0, 10);
-        //NewScore();
         
         if (spawnCoin <= 1){
             SpawnHeart();
         }
 
         isDead = true;
-        enemy.GetComponent<SpriteRenderer>().sprite = enemyExplode;
+        GetComponent<SpriteRenderer>().sprite = enemyExplode;
         audioSource.PlayOneShot(explodeSFX);
         GameObject.Destroy(this.gameObject, 0.3f);
 
-    
     }
 
     public void SpawnHeart(){
         GameObject heartInstance =  Instantiate(heart, transform.position, transform.rotation);
     }
 
-    public void NewScore() {
-        scoreText.GetComponent<Score>().ChangeScore();
-    }
 }

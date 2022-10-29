@@ -34,16 +34,16 @@ public class PlayerMovement : MonoBehaviour
     }
     
     void Anim(){
-        if(horizontal > 0.5f){
+        if(horizontal > 0.2f){
             player.GetComponent<SpriteRenderer>().sprite = spriteRight;
-        }else if(horizontal < 0.5f && horizontal > 0)
+        }else if(horizontal < 0.2f && horizontal > 0)
         {
             player.GetComponent<SpriteRenderer>().sprite = spriteDef;
         }
 
-        if(horizontal < -0.5){
+        if(horizontal < -0.2f){
             player.GetComponent<SpriteRenderer>().sprite = spriteLeft;
-        }else if(horizontal < 0 && horizontal > -0.5f)
+        }else if(horizontal < 0 && horizontal > -0.2f)
         {
             player.GetComponent<SpriteRenderer>().sprite = spriteDef;
         }

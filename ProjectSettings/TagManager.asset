@@ -8,9 +8,9 @@ TagManager:
   - Enemy
   - Heart
   - Music
-  - EnemiesManager
   - WaveManager
   - Score
+  - MenuLoader
   layers:
   - Default
   - TransparentFX

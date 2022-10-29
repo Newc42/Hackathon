@@ -8,11 +8,16 @@ public class MenuLoader : MonoBehaviour
     int enemies;
     [SerializeField] AudioClip menuSong;
 
-    public void ChangeScene(){
+    public void EnemyDestroyed(){
         enemies = GameObject.FindGameObjectsWithTag("Enemy").Length-1;
         Debug.Log(enemies);
+
         if(enemies <= 0){
-            SceneManager.LoadScene("Menu");
+            ChangeScene();   
         }
+    }
+
+    void ChangeScene(){
+        SceneManager.LoadScene("Menu");
     }
 }
