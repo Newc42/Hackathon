@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemies(){ 
         enemiesSpawned++;
-        if(enemiesSpawned >= 15){
+        if(enemiesSpawned >= 4){
             CancelInvoke();
         }
         Vector2 spawnPoint = new Vector2(waveManager.transform.position.x + Random.Range(-3f,3f), waveManager.transform.position.y + Random.Range(-1f,1f));

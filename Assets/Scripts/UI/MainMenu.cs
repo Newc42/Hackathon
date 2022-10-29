@@ -4,8 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
+
+    [SerializeField] AudioClip levelOneSong;
+
     public void PlayScene()
     {
+        PlayLevelOneMusic();
         SceneManager.LoadScene("SampleScene");   
     }
 
@@ -18,28 +22,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-
-
-    /*
-   public void changeScene()
-    {
-        SceneManager.LoadScene(1);
+    void PlayLevelOneMusic(){
+        Debug.Log("play music");
+        AudioSource audioSource = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
+        audioSource.clip = levelOneSong;
+        audioSource.Play();
     }
 
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            changeScene();
-        }
-        
-    }
-    */
 }

@@ -165,6 +165,7 @@ MonoBehaviour:
   accelerationTime: 0.01
   rb: {fileID: 7365354279217864425}
   maxSpeed: 1
+  forwardMovement: 1.4
 --- !u!82 &2088649155353968416
 AudioSource:
   m_ObjectHideFlags: 0

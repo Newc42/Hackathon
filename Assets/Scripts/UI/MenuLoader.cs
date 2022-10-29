@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuLoader : MonoBehaviour
 {
     int enemies;
+    [SerializeField] AudioClip menuSong;
 
     public void ChangeScene(){
         enemies = GameObject.FindGameObjectsWithTag("Enemy").Length-1;
