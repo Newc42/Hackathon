@@ -22,6 +22,6 @@ public class MenuLoader : MonoBehaviour
     }
 
     public void LoadGame(){
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("LevelsScene");
     }
 }

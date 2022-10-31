@@ -1416,7 +1416,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4179335381347405732, guid: 7aa9c1fd227aac14d9bd78d65132b681, type: 3}
       propertyPath: m_Volume
-      value: 0
+      value: 0.611
       objectReference: {fileID: 0}
     - target: {fileID: 4179335381347405735, guid: 7aa9c1fd227aac14d9bd78d65132b681, type: 3}
       propertyPath: m_RootOrder
