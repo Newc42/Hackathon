@@ -9,12 +9,12 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("SpawnEnemies", 0, Random.Range(1f, 3f));
+        InvokeRepeating("SpawnEnemies", 0, Random.Range(0.5f, 2f));
     }
 
     void SpawnEnemies(){ 
         enemiesSpawned++;
-        if(enemiesSpawned >= 4){
+        if(enemiesSpawned >= 300){
             CancelInvoke();
         }
         Vector2 spawnPoint = new Vector2(waveManager.transform.position.x + Random.Range(-3f,3f), waveManager.transform.position.y + Random.Range(-1f,1f));

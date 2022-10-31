@@ -20,4 +20,8 @@ public class MenuLoader : MonoBehaviour
     void ChangeScene(){
         SceneManager.LoadScene("Menu");
     }
+
+    public void LoadGame(){
+        SceneManager.LoadScene("SampleScene");
+    }
 }
