@@ -33,11 +33,11 @@ public class playerHealth : MonoBehaviour
 
     }
 
-    public void LoseHp(){
-        playerHp -= 1;
+    public void LoseHp(float damage){
+        playerHp -= damage;
         audioSource.PlayOneShot(hurt);
         HPSlider.value = HPSlider.maxValue - playerHp;
-        Debug.Log("lololo");
+
         GetComponent<PlayerChangeColor>().ChangeColor();
         myCamera.GetComponent<CameraShake>().Play();
 

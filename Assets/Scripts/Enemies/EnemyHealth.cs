@@ -28,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
 
     void EnemyLoseHp(){
         enemyHealth--;
+
         GetComponent<EnemyChangeColor>().ChangeColor();
 
         audioSource.PlayOneShot(hurtSFX);
@@ -49,12 +50,21 @@ public class EnemyHealth : MonoBehaviour
         isDead = true;
         GetComponent<SpriteRenderer>().sprite = enemyExplode;
         audioSource.PlayOneShot(explodeSFX);
+
+        if(transform.parent != null){
+            Destroy(transform.parent.gameObject, 0.3f);
+        }
+
         GameObject.Destroy(this.gameObject, 0.3f);
 
     }
 
     public void SpawnHeart(){
         GameObject heartInstance =  Instantiate(heart, transform.position, transform.rotation);
+    }
+
+    void OnDestroy(){
+        
     }
 
 }

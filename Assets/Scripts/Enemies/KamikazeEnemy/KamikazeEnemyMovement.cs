@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class KamikazeEnemyMovement : MonoBehaviour
 {
-    public Transform player;
-
+    Transform player;
     float agroRange = 5;
-
     Rigidbody2D enemyRb;
     float moveSpeedAfter = 50f;
     float moveSpeedBefore = 2f;
     bool canMove = true;
+    Animator anim;
+    AudioSource source;
+    public AudioClip kamikazeExplodeSFX;
+    bool stopPlayingThisFuckingSound = false;
+
+    public float explosionDamage = 2;
+    bool thrustEnabled = false;
 
     private Vector2 movement;
 
     private void Start() {
         enemyRb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void Move(){
@@ -38,7 +44,14 @@ public class KamikazeEnemyMovement : MonoBehaviour
             ChasePlayer(direction);   
         }
 
-        if(distToPlayer < 1.5f){
+        if(distToPlayer < agroRange && !thrustEnabled){
+            thrustEnabled = true;
+            GameObject.FindGameObjectWithTag("sss").GetComponent<SpriteRenderer>().enabled = enabled;
+            GameObject.FindGameObjectWithTag("ssss").GetComponent<Transform>().rotation = Quaternion.Euler(0,0,90);
+        }
+
+        if(distToPlayer < 0.8f && !stopPlayingThisFuckingSound){
+            stopPlayingThisFuckingSound = true;
             EnemyExplode();
         }
 
@@ -51,7 +64,7 @@ public class KamikazeEnemyMovement : MonoBehaviour
         direction.Normalize();
         movement = direction;
 
-        enemyRb.MovePosition(transform.position + (direction * moveSpeedAfter * Time.deltaTime));  
+        enemyRb.MovePosition(transform.position + (direction * moveSpeedAfter * Time.deltaTime));
     }
 
     void RotateEnemy(Vector3 direction){
@@ -59,7 +72,14 @@ public class KamikazeEnemyMovement : MonoBehaviour
         enemyRb.rotation = angle;
     }
 
-    void EnemyExplode(){
-        GameObject.Destroy(this.gameObject);
+    void EnemyExplode(){  
+        anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
+        source.PlayOneShot(kamikazeExplodeSFX);
+        anim.Play("KamikazeExplode");
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<playerHealth>().LoseHp(explosionDamage);
+
+        GameObject.Destroy(this.gameObject, 0.5f);
     }
 }

@@ -11,6 +11,8 @@ TagManager:
   - WaveManager
   - Score
   - MenuLoader
+  - sss
+  - ssss
   layers:
   - Default
   - TransparentFX
