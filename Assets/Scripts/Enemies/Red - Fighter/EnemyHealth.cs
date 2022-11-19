@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject heart;
     public AudioClip hurtSFX;
     public GameObject enemyManager;
+
     
 
     void Start() {
@@ -61,10 +62,6 @@ public class EnemyHealth : MonoBehaviour
 
     public void SpawnHeart(){
         GameObject heartInstance =  Instantiate(heart, transform.position, transform.rotation);
-    }
-
-    void OnDestroy(){
-        
     }
 
 }
