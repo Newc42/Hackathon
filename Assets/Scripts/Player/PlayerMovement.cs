@@ -4,49 +4,38 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
- 
-    Rigidbody2D playerRb;
-    public GameObject player;
-    public Sprite spriteRight;
-    public Sprite spriteDef;
-    public Sprite spriteLeft;
-    public float playerSpeed = 5f;
-    public float vertical;
-    public float horizontal;
+    private Rigidbody2D playerRb;
+    [SerializeField] private float moveSpeed;
+    private Vector2 playerMovementDirection;
 
-    void Start()
+    private void Awake()
     {
         playerRb = GetComponent<Rigidbody2D>();
     }
 
-   
-    void FixedUpdate()
+    private void GetPlayerInputNormalized(){
+        playerMovementDirection.x = Input.GetAxisRaw("Horizontal");
+        playerMovementDirection.y = Input.GetAxisRaw("Vertical");
+
+        playerMovementDirection = playerMovementDirection.normalized;
+
+        // Gets player input and makes it normalized.
+    }
+
+    private void Update()
     {
-        Move();  
-        Anim();
+        GetPlayerInputNormalized();
     }
 
-    void Move(){
-        
-        vertical = Input.GetAxis("Vertical");
-        horizontal = Input.GetAxis("Horizontal");
-        playerRb.velocity = new Vector2(horizontal * playerSpeed, vertical * playerSpeed);
+    private void FixedUpdate() {
+        MovePlayer();
     }
+
+    private void MovePlayer(){
+        playerRb.velocity = playerMovementDirection * moveSpeed * Time.fixedDeltaTime;
+
+        // Moves player according to the normalized playerMovementDirection vectror.
+    }
+
     
-    void Anim(){
-        if(horizontal > 0.2f){
-            player.GetComponent<SpriteRenderer>().sprite = spriteRight;
-        }else if(horizontal < 0.2f && horizontal > 0)
-        {
-            player.GetComponent<SpriteRenderer>().sprite = spriteDef;
-        }
-
-        if(horizontal < -0.2f){
-            player.GetComponent<SpriteRenderer>().sprite = spriteLeft;
-        }else if(horizontal < 0 && horizontal > -0.2f)
-        {
-            player.GetComponent<SpriteRenderer>().sprite = spriteDef;
-        }
-    }
-
 }
